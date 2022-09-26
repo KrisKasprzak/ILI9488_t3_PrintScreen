@@ -29,7 +29,7 @@ As this library requires and SD card there are 2 versions of the functions 1) fo
 
 <br>
 <br>
-
+<b>How to get on-board SD card readers working</b>
 Teensy 4.0's are 3v3 hence you must adapt the 3.5" TFT to talk to the MCU. In order to get the on-board SD card working you will need to 
 a) replace the 3 SD resistors with 0 ohm 
 b) solder J1 on display to force 3v3 operation
