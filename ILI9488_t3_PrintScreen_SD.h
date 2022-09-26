@@ -77,7 +77,7 @@ you will need to pass in:
 	SD.begin(cs);
 
   
-	dataFile = SD.open(FileName, FILE_WRITE);
+	dataFile = SD.open(FileName, FILE_WRITE_BEGIN);
 
 	if (!dataFile){
 		return false;
