@@ -1,7 +1,7 @@
 <b><h2><center>Print Screen for ILI9488_t3 libraries and Touchscreen Displays</center></h1></b>
 
-This library will let programmers add a print screen capability to their projects. There are 2 functions: 1) SaveBMP24 and 2) DrawBMP24 so you can save and draw images. The created imagtes are 24-bit BMP files
-As this library requires and SD card there are 2 versions of the functions 1) for SD.h and 2) SdFat.h. The functions are simple inline and don't require any object creation. The goal was to make implementation simple such as
+This library will let programmers add a print screen capability to their projects. There are 2 functions: 1) SaveBMP24 and 2) DrawBMP24 so you can save and draw images. The created images are 24-bit BMP files so they can be easily edited in Paint or other bitmap editors.
+As this library requires an SD card, there are 2 versions of the functions 1) for SD.h and 2) SdFat.h. The functions are simple inline and don't require any object creation. The goal was to make implementation simple. Just draw some graphics, and make a call to the SaveBMP24() function. The library will NOT overwrite an existing file, nor will it create the next available file. You must do your own housekeeking.
 
 <b>Some examples of captured screens are:</b>
 
@@ -11,26 +11,29 @@ As this library requires and SD card there are 2 versions of the functions 1) fo
 
   <b>Tips on usage</b>
   <li>
-  Many 3.5: ILI9488 displays do not have a tri-state MISO--meaning the display tends to own the MISO
-  line not allowing other SPI devices (Touch and SD cards) to send data to the MCU. A special buffer may be needed
-  on display MISO--may not be needed, See the diagram on github for part number and connection
+  Many 3.5" ILI9488 displays do not have a tri-state MISO--meaning the display tends to own the MISO
+  line not allowing other SPI devices (such as Touch and SD cards) to send data to the MCU. A special buffer may be needed
+  on the display's MISO line, See the diagram for a part number and connection.
   </li>
   <li>
-  if you want to use a PrintScreen capabiity you must use a frame buffer (xxx.useFrameBuffer(true)), and you
-  must then use xxx.updateDisplay() to send data to display
+  If you want to use a PrintScreen capability, you must use a frame buffer (xxx.useFrameBuffer(true)), and you
+  must then use xxx.updateDisplay() to send data to display.
   </li>
   <li>
-  the library clock speeds in the ILI9488_t3.h seem to work, you may slow the read rate if there is an issue
+  The library clock speeds in the ILI9488_t3.h seem to work, however, you may need to slow the read rate if there is an issue
+	#define ILI9488_SPICLOCK       30000000
+	#define ILI9488_SPICLOCK_READ   4000000 // this may have to be set to a lower speed
   </li>
   <li>
   SD cards vary so you may have to lower the write time. Currently the library uses 20 mhz
+  The .h file specifies the speed, see the call: sd.begin(cs, SD_SCK_MHZ(20));
   </li>
 
 
 <br>
 <br>
 <b>How to get on-board SD card readers working</b>
-Teensy 4.0's are 3v3 hence you must adapt the 3.5" TFT to talk to the MCU. In order to get the on-board SD card working you will need to 
+Teensy 4.0's are 3v3 hence you must adapt the 3.5" TFT to talk to the MCU, as they are intended for 5v0 MCU's. In order to get the on-board SD card working you will need to:
 a) replace the 3 SD resistors with 0 ohm 
 b) solder J1 on display to force 3v3 operation
  
