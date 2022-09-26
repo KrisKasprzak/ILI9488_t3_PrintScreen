@@ -7,7 +7,7 @@ As this library requires an SD card, there are 2 versions of the functions 1) fo
 
 ![header image](https://raw.github.com/KrisKasprzak/ILI9488_t3_PrintScreen/master/Images/Before.jpg)
 ![header image](https://raw.github.com/KrisKasprzak/ILI9488_t3_PrintScreen/master/Images/PrintScreen.jpg)
-
+![header image](https://raw.github.com/KrisKasprzak/ILI9488_t3_PrintScreen/master/Images/PrintScreen3.jpg)
 
   <b>Tips on usage</b>
   <li>
