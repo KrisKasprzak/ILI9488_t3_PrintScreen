@@ -39,9 +39,9 @@ You need not initialize and SD card or even include the SD librar, all that is d
 While this library was created for the ILI9341_t3 and intended for Teensy-based MCU's, the library *may* be adaptable to other display drivers provide the driver has a method getPixel(). At the time of posting, I don't know of any lib other that the ILI9341_t3.h that support the getPixel() method.
 
 
-![header image](https://raw.github.com/KrisKasprzak/ILI9341_t3_controls/master/Images/MISO_Buffer.jpg)
-![header image](https://raw.github.com/KrisKasprzak/ILI9341_t3_controls/master/Images/PrintScreen.jpg)
-![header image](https://raw.github.com/KrisKasprzak/ILI9341_t3_controls/master/Images/PrintScreen3.jpg)
+![header image](https://raw.github.com/KrisKasprzak/ILI9488_t3_PrintScreen/master/Images/MISO_Buffer.jpg)
+![header image](https://raw.github.com/KrisKasprzak/ILI9488_t3_PrintScreen/master/Images/PrintScreen.jpg)
+![header image](https://raw.github.com/KrisKasprzak/ILI9488_t3_PrintScreen/master/Images/PrintScreen3.jpg)
 
 <br>
 <br>
