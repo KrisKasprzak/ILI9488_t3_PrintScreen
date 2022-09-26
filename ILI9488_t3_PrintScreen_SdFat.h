@@ -79,11 +79,9 @@ you will need to pass in:
 	// if no and SD does fail, we'll cathc it in the SD open statement
 	//sd.begin(cs);
 
-	//sd.begin(cs, SD_SCK_MHZ(20));
-
 	sd.begin(cs, SD_SCK_MHZ(20));
 
-	IsSD = dataFile.open(FileName, FILE_WRITE);
+	IsSD = dataFile.open(FileName, FILE_WRITE_BEGIN);
 	Serial.print("SD file open ");Serial.println(IsSD);
 	
 
