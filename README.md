@@ -21,12 +21,15 @@ As this library requires an SD card, there are 2 versions of the functions 1) fo
   </li>
   <li>
   The library clock speeds in the ILI9488_t3.h seem to work, however, you may need to slow the read rate if there is an issue
+	
 	#define ILI9488_SPICLOCK       30000000
 	#define ILI9488_SPICLOCK_READ   4000000 // this may have to be set to a lower speed
   </li>
   <li>
   SD cards vary so you may have to lower the write time. Currently the library uses 20 mhz
-  The .h file specifies the speed, see the call: sd.begin(cs, SD_SCK_MHZ(20));
+  The .h file specifies the speed, see the call: 
+	
+	sd.begin(cs, SD_SCK_MHZ(20));
   </li>
 
 
@@ -43,17 +46,20 @@ b) solder J1 on display to force 3v3 operation
 <br>
 
 <b>Implementation</b>
-#include <ILI9488_t3_PrintScreen_SD.h>
+
+	#include <ILI9488_t3_PrintScreen_SD.h>
+
 or
-#include <ILI9488_t3_PrintScreen_SdFat.h>
+
+	#include <ILI9488_t3_PrintScreen_SdFat.h>
 
 To save a screen shot, make a call like this
 
-SaveBMP24(&display_object, chip select pin, "the_file.bmp");
+	SaveBMP24(&display_object, chip select pin, "the_file.bmp");
 
 To draw a BMP file to the screen, make a call like this
 
-DrawBMP24(&display_object, chip select pin, "the_file.bmp");
+	DrawBMP24(&display_object, chip select pin, "the_file.bmp");
 
 
 You need not initialize and SD card or even include the SD librar, all that is done in inside the functions.
