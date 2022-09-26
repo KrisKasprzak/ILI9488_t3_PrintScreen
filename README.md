@@ -5,14 +5,22 @@ As this library requires and SD card there are 2 versions of the functions 1) fo
 
   Tips on usage
   <li>
-  1. Many 3.5: ILI9488 displays do not have a tri-state MISO--meaning the display tends to own the MISO
+  Many 3.5: ILI9488 displays do not have a tri-state MISO--meaning the display tends to own the MISO
   line not allowing other SPI devices (Touch and SD cards) to send data to the MCU. A special buffer may be needed
   on display MISO--may not be needed, See the diagram on github for part number and connection
-  2) if you want to use a PrintScreen capabiity you must use a frame buffer (xxx.useFrameBuffer(true)), and you
+  </li>
+  <li>
+  if you want to use a PrintScreen capabiity you must use a frame buffer (xxx.useFrameBuffer(true)), and you
   must then use xxx.updateDisplay() to send data to display
-  3) the library clock speeds in the ILI9488_t3.h seem to work, you may slow the read rate if there is an issue
-  4) SD cards vary so you may have to lower the write time. Currently the library uses 20 mhz
-  5) Teensy 4.0's are 3v3 hence you must adapt the 3.5" TFT to talk to the MCU. a) replace the 3 SD resistors with 0 ohm b) solder J1 on display to force 3v3 operation
+  </li>
+  <li>
+  the library clock speeds in the ILI9488_t3.h seem to work, you may slow the read rate if there is an issue
+  </li>
+  <li>
+  SD cards vary so you may have to lower the write time. Currently the library uses 20 mhz
+  </li>
+  <li>
+  Teensy 4.0's are 3v3 hence you must adapt the 3.5" TFT to talk to the MCU. a) replace the 3 SD resistors with 0 ohm b) solder J1 on display to force 3v3 operation
 </li>
 
 
