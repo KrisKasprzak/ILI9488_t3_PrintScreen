@@ -5,7 +5,7 @@ As this library requires an SD card, there are 2 versions of the functions 1) fo
 
 <b>Some examples of captured screens are:</b>
 
-![header image](https://raw.github.com/KrisKasprzak/ILI9488_t3_PrintScreen/master/Images/Display.jpg)
+![header image](https://raw.github.com/KrisKasprzak/ILI9488_t3_PrintScreen/master/Images/Before.jpg)
 ![header image](https://raw.github.com/KrisKasprzak/ILI9488_t3_PrintScreen/master/Images/PrintScreen.jpg)
 
 
