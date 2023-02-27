@@ -81,7 +81,7 @@ you will need to pass in:
 
 	sd.begin(cs, SD_SCK_MHZ(20));
 
-	IsSD = dataFile.open(FileName, FILE_WRITE_BEGIN);
+	IsSD = dataFile.open(FileName, FILE_WRITE);
 	Serial.print("SD file open ");Serial.println(IsSD);
 	
 
